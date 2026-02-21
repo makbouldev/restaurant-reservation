@@ -127,7 +127,7 @@ const defaultGalleryImages = [
   'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80'
 ];
 const defaultRestaurantInfo = {
-  restaurantName: 'restaurant',
+  restaurantName: 'Laplage',
   phone: '+212 522 49 16 16',
   whatsappPhone: '212522207111',
   email: 'contact@pfm.ma',
@@ -291,8 +291,8 @@ export default function App() {
   const [contactForm, setContactForm] = useState({ name: '', email: '', phone: '', message: '' });
   const [contactStatus, setContactStatus] = useState({ type: '', text: '' });
   const [siteLogoPath] = useState(siteLogoAsset);
-  const [siteLogoSize] = useState(56);
-  const [siteBrandName] = useState('restaurant');
+  const [siteLogoSize] = useState(64);
+  const [siteBrandName] = useState('Laplage');
   const [siteBrandNameVisible] = useState(true);
   const [restaurantInfo, setRestaurantInfo] = useState(defaultRestaurantInfo);
   const [siteImages, setSiteImages] = useState({ heroBackground: '', reservationPanelBackground: '', contactBackground: '' });
