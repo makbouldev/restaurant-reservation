@@ -29,14 +29,14 @@ export const translations = {
     app: {
       checkingAdmin: 'Verification de la session administrateur...',
       adminTitle: '{{restaurantName}} Administration',
-      heroKicker: 'Experience {{restaurantName}}',
-      heroTitle: 'La cuisine devient un spectacle vivant',
-      heroText: 'Lumieres immersives, saveurs intenses et assiettes qui arrivent comme une scene de theatre.',
+      heroKicker: 'Bienvenue chez {{restaurantName}}',
+      heroTitle: 'Des plats frais, un service chaleureux, des moments a partager',
+      heroText: 'Profitez d une cuisine simple et savoureuse dans une ambiance conviviale, en famille ou entre amis.',
       reserveTable: 'Reserver une table',
-      h1Label: 'Cuisine signature',
-      h1Text: 'Produits frais selectionnes chaque matin',
-      h2Label: 'Ambiance',
-      h2Text: 'Animation musicale lounge, lumieres cine et service haut de gamme',
+      h1Label: 'Notre promesse',
+      h1Text: 'Frais, bon et genereux',
+      h2Label: 'Notre slogan',
+      h2Text: 'Le gout de la mer, l ame de Laplage',
       h3Label: 'Horaires',
       h3Text: 'Ouvert tous les jours de 12:00 a 01:00',
       menuTitle: 'Menu signature',
@@ -75,6 +75,7 @@ export const translations = {
       platesShown: '{{count}} plat(s) affiches',
       previewMenuTitle: 'Apercu du Menu',
       viewAllMenu: 'Voir tout le menu',
+      viewAllOffers: 'Voir tout',
       galleryLabel: 'Ambiance',
       frameLabel: 'Cadre',
       contactFormTitle: 'Formulaire de contact',
@@ -416,6 +417,7 @@ export const translations = {
       platesShown: '{{count}} item(s) shown',
       previewMenuTitle: 'Menu Preview',
       viewAllMenu: 'View full menu',
+      viewAllOffers: 'View all',
       galleryLabel: 'Atmosphere',
       frameLabel: 'Frame',
       contactFormTitle: 'Contact Form',
@@ -757,6 +759,7 @@ export const translations = {
       platesShown: '{{count}} طبق معروض',
       previewMenuTitle: 'معاينة القائمة',
       viewAllMenu: 'عرض القائمة كاملة',
+      viewAllOffers: 'عرض الكل',
       galleryLabel: 'الأجواء',
       frameLabel: 'إطار',
       contactFormTitle: 'نموذج التواصل',
@@ -1030,4 +1033,3 @@ export const translations = {
 export function replaceParam(template, key, value) {
   return template.replace(`{{${key}}}`, String(value));
 }
-

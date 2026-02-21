@@ -1,7 +1,24 @@
 import { useEffect, useState } from 'react';
 
-const INITIAL_VISIBLE_ITEMS = 9;
-const LOAD_MORE_STEP = 9;
+const INITIAL_VISIBLE_ITEMS = 6;
+const LOAD_MORE_STEP = 6;
+
+function optimizeGalleryImage(url, width, quality) {
+  const raw = String(url || '').trim();
+  if (!raw) return '';
+  if (!raw.includes('images.unsplash.com')) return raw;
+
+  try {
+    const parsed = new URL(raw);
+    parsed.searchParams.set('auto', 'format');
+    parsed.searchParams.set('fit', 'crop');
+    parsed.searchParams.set('w', String(width));
+    parsed.searchParams.set('q', String(quality));
+    return parsed.toString();
+  } catch (error) {
+    return raw;
+  }
+}
 
 export default function AmbiancePage({ t, galleryImages, restaurantInfo }) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_ITEMS);
@@ -22,7 +39,19 @@ export default function AmbiancePage({ t, galleryImages, restaurantInfo }) {
             className={`gallery-item gallery-item--${index % 5 === 0 ? 'xl' : index % 3 === 0 ? 'tall' : 'wide'} reveal-on-scroll reveal-delay-${(index % 4) + 1}`}
             key={`${image}-${index}`}
           >
-            <img src={image} alt={`${restaurantInfo.restaurantName} ${index + 1}`} loading="lazy" decoding="async" />
+            <img
+              src={optimizeGalleryImage(image, 960, 68)}
+              srcSet={[
+                `${optimizeGalleryImage(image, 420, 58)} 420w`,
+                `${optimizeGalleryImage(image, 720, 64)} 720w`,
+                `${optimizeGalleryImage(image, 960, 68)} 960w`
+              ].join(', ')}
+              sizes="(max-width: 640px) 94vw, (max-width: 992px) 48vw, 28vw"
+              alt={`${restaurantInfo.restaurantName} ${index + 1}`}
+              loading={index < 2 ? 'eager' : 'lazy'}
+              fetchPriority={index < 2 ? 'high' : 'low'}
+              decoding="async"
+            />
             <figcaption>
               <span>{restaurantInfo.restaurantName} {t.app.galleryLabel}</span>
               <small>{t.app.frameLabel} {String(index + 1).padStart(2, '0')}</small>

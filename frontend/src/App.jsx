@@ -135,9 +135,9 @@ const defaultRestaurantInfo = {
   openingHours: 'Ouvert tous les jours de 09:00 a 18:00',
   mapUrl: 'https://maps.google.com/?q=Boulevard+de+la+Corniche+Casablanca',
   mapEmbedUrl: 'https://www.google.com/maps?q=Boulevard%20de%20la%20Corniche%20Casablanca&output=embed',
-  heroKicker: 'Service {{restaurantName}}',
-  heroTitle: 'Accompagnement et services funeraires de confiance',
-  heroText: 'Une equipe disponible pour vous accompagner avec discretion, ecoute et organisation complete.',
+  heroKicker: 'Bienvenue chez {{restaurantName}}',
+  heroTitle: 'Des plats frais, un service chaleureux, des moments a partager',
+  heroText: 'Profitez d une cuisine simple et savoureuse dans une ambiance conviviale, en famille ou entre amis.',
   contactHeadline: 'Contactez notre equipe',
   contactDescription: 'Nous restons disponibles pour toute demande d information ou assistance immediate.',
   footerNote: 'Un accompagnement humain et professionnel, 7j/7.'
@@ -150,85 +150,85 @@ const defaultSiteImages = {
 
 const classicServicesData = [
   {
-    kicker: 'Diner prive',
-    title: 'Table privee haut de gamme',
-    text: 'Un espace reserve pour anniversaires, rendez-vous et soirees exclusives.',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    kicker: 'Evenements entreprise',
-    title: 'Evenements entreprise',
-    text: 'Menus adaptes, accueil VIP et coordination complete pour vos equipes.',
-    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    kicker: 'Experience chef',
-    title: 'Cuisine en direct',
-    text: 'Experience immersive avec chef en direct et presentation artistique des plats.',
-    image: 'https://images.unsplash.com/photo-1556911220-bda9f7f7597e?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    kicker: 'Packs anniversaire',
-    title: 'Packs anniversaire',
-    text: 'Decoration, dessert signature et playlist personnalisee pour votre celebration.',
-    image: 'https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    kicker: 'Livraison haut de gamme',
-    title: 'Livraison soignee',
-    text: 'Conditionnement elegant et rapide pour garder saveur, style et qualite.',
+    kicker: 'Livraison',
+    title: 'Livraison rapide a domicile',
+    text: 'Commande en ligne et livraison soignee pour garder la qualite des plats chauds et froids.',
     image: 'https://images.unsplash.com/photo-1526367790999-0150786686a2?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    kicker: 'Coins mariage',
-    title: 'Espaces mariage',
-    text: 'Mini corners culinaires modernes pour cocktails de mariage et receptions.',
-    image: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1200&q=80'
+    kicker: 'Reservation groupe',
+    title: 'Tables de groupe',
+    text: 'Organisation simple pour familles et groupes avec placement adapte et service fluide.',
+    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    kicker: 'Click & Collect',
+    title: 'Retrait sur place',
+    text: 'Preparez votre commande en avance et recuperez-la rapidement sans attente.',
+    image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    kicker: 'Anniversaire',
+    title: 'Pack anniversaire',
+    text: 'Table decoree, dessert anniversaire et service dedie pour votre celebration.',
+    image: 'https://images.unsplash.com/photo-1464349153735-7db50ed83c84?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    kicker: 'Traiteur',
+    title: 'Service traiteur evenement',
+    text: 'Buffet et menu personnalise pour reunions, receptions et fetes privees.',
+    image: 'https://images.unsplash.com/photo-1555244162-803834f70033?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    kicker: 'Entreprise',
+    title: 'Formules entreprise',
+    text: 'Menus midi adaptes aux equipes avec facturation simple et livraison ponctuelle.',
+    image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80'
   }
 ];
 
 const specialOffersData = [
   {
-    kicker: 'Eclat anniversaire',
-    title: 'Forfait anniversaire haut de gamme',
-    text: 'Gateau signature, mise en scene lumineuse et coin photo dedie.',
-    badge: '-15% groupe 6+',
-    image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80'
+    kicker: 'Happy Hour',
+    title: 'Boissons -20%',
+    text: 'Chaque jour de 17h a 19h, profitez d une reduction sur notre selection de boissons.',
+    badge: '17h - 19h',
+    image: 'https://images.unsplash.com/photo-1514361892635-6d33c65d8d4d?auto=format&fit=crop&w=1200&q=80'
+  },
+  {
+    kicker: 'Menu midi',
+    title: 'Formule dejeuner',
+    text: 'Entree + plat + boisson a prix special du lundi au vendredi.',
+    badge: 'Lun - Ven',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80'
   },
   {
     kicker: 'Soiree duo',
-    title: 'Diner duo signature',
-    text: 'Menu 3 services, cocktail sans alcool duo et table romantique reservee.',
-    badge: 'Edition soiree',
+    title: 'Menu duo romantique',
+    text: 'Menu partage, dessert duo et table reservee pour deux personnes.',
+    badge: 'Sur reservation',
     image: 'https://images.unsplash.com/photo-1528605105345-5344ea20e269?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    kicker: 'Dimanche famille',
+    kicker: 'Weekend famille',
     title: 'Offre famille week-end',
-    text: 'Menus enfants, plateau partage et dessert offert pour 4 personnes.',
-    badge: 'Tous les dimanches',
-    image: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80'
+    text: 'Menus enfants + plat partage avec boisson offerte pour 4 personnes.',
+    badge: 'Sam - Dim',
+    image: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    kicker: 'Soiree equipe',
-    title: 'Forfait entreprise',
-    text: 'Tarif groupe, espace semi-prive et service accelere pour equipes.',
-    badge: 'Sur reservation',
-    image: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=1200&q=80'
+    kicker: 'Etudiants',
+    title: 'Reduction etudiant',
+    text: 'Presentation carte etudiante = reduction immediate sur les plats selectionnes.',
+    badge: 'Mardi',
+    image: 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    kicker: 'Moments Ramadan',
-    title: 'Experience ftour',
-    text: 'Menu ftour complet avec ambiance detendue et selection maison.',
-    badge: 'Saisonnier',
-    image: 'https://images.unsplash.com/photo-1514516816566-de580c621376?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
-    kicker: 'Apres-travail',
-    title: 'Accords amuse-bouches et boissons',
-    text: 'Assiettes d amuse-bouches et boissons a prix doux entre 17h et 20h.',
-    badge: 'Du lundi au jeudi',
-    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80'
+    kicker: 'Anniversaire',
+    title: 'Dessert offert',
+    text: 'Pour toute reservation anniversaire, dessert signature offert par la maison.',
+    badge: 'Groupe 4+',
+    image: 'https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1200&q=80'
   }
 ];
 

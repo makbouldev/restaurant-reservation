@@ -6,6 +6,31 @@ import { replaceParam } from '../i18n';
 import heroBackgroundImage from '../assets/hero-background.jpg';
 import reservationBackgroundImage from '../assets/reservation-background.jpg';
 
+function pickMixedMenuItems(items, limit = 6) {
+  if (!Array.isArray(items) || items.length === 0) return [];
+
+  const byCategory = new Map();
+  items.forEach((item) => {
+    const category = String(item?.category || 'Autres').trim() || 'Autres';
+    if (!byCategory.has(category)) byCategory.set(category, []);
+    byCategory.get(category).push(item);
+  });
+
+  const queues = Array.from(byCategory.values());
+  const result = [];
+  while (result.length < limit) {
+    let progressed = false;
+    for (const queue of queues) {
+      if (queue.length > 0 && result.length < limit) {
+        result.push(queue.shift());
+        progressed = true;
+      }
+    }
+    if (!progressed) break;
+  }
+  return result;
+}
+
 export default function HomePage({
   t,
   restaurantName,
@@ -33,6 +58,7 @@ export default function HomePage({
   const heroBackgroundStyle = {
     backgroundImage: `radial-gradient(circle at 14% 12%, rgba(255, 196, 110, 0.32), transparent 36%), radial-gradient(circle at 85% 0%, rgba(90, 209, 255, 0.22), transparent 34%), linear-gradient(120deg, rgba(8, 18, 34, 0.5) 8%, rgba(8, 18, 34, 0.2) 48%, rgba(8, 18, 34, 0.56) 100%), url('${heroBackground}')`
   };
+  const mixedPreviewMenu = pickMixedMenuItems(menu, 6);
 
   return (
     <>
@@ -47,11 +73,6 @@ export default function HomePage({
               <Link to="/reservation" className="btn btn-warning btn-lg px-4 hero-cta">
                 {t.app.reserveTable}
               </Link>
-              <div className="hero-mini-pills">
-                <span>{t.app.h1Label}</span>
-                <span>{t.app.h2Label}</span>
-                <span>{t.app.h3Label}</span>
-              </div>
             </div>
           </div>
           <aside className="hero-photo-panel" aria-hidden="true">
@@ -71,7 +92,12 @@ export default function HomePage({
       </header>
 
       <section className="container py-4 reveal-on-scroll">
-        <h2 className="section-title mb-4">{t.app.specialsTitle}</h2>
+        <div className="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+          <h2 className="section-title m-0">{t.app.specialsTitle}</h2>
+          <Link to="/offres-speciales" className="btn btn-outline-light btn-sm">
+            {t.app.viewAllOffers || 'Voir tout'}
+          </Link>
+        </div>
         <div className="row g-4">
           {specialOffers.slice(0, 3).map((offer, index) => (
             <SpecialCard
@@ -94,7 +120,7 @@ export default function HomePage({
           <Link to="/menu" className="btn btn-outline-light btn-sm">{t.app.viewAllMenu}</Link>
         </div>
         <div className="row g-4">
-          {menu.slice(0, 3).map((item, index) => (
+          {mixedPreviewMenu.map((item, index) => (
             <MenuCard key={item.id} item={item} t={t} revealIndex={index} />
           ))}
         </div>

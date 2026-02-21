@@ -1088,6 +1088,8 @@ body {
   box-shadow: 0 14px 28px rgba(10, 30, 45, 0.18);
   isolation: isolate;
   transform: translateZ(0);
+  content-visibility: auto;
+  contain-intrinsic-size: 240px 210px;
 }
 
 .gallery-item::after {
