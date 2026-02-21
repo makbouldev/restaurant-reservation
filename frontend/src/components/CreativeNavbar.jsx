@@ -125,6 +125,30 @@ export default function CreativeNavbar({ currentRoute, lang, setLang, t, logoPat
           </button>
 
           <div className={`creative-nav-main-row ${menuOpen ? 'is-open' : ''}`}>
+            <div className="creative-nav-lang-mobile" aria-label={t.nav.languages}>
+              <button
+                type="button"
+                className={`lang-switch-btn ${lang === 'fr' ? 'is-active' : ''}`}
+                onClick={() => setLang('fr')}
+              >
+                FR
+              </button>
+              <button
+                type="button"
+                className={`lang-switch-btn ${lang === 'en' ? 'is-active' : ''}`}
+                onClick={() => setLang('en')}
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                className={`lang-switch-btn ${lang === 'ar' ? 'is-active' : ''}`}
+                onClick={() => setLang('ar')}
+              >
+                AR
+              </button>
+            </div>
+
             <div className="creative-nav-links">
               {navItems.map((item) => (
                 <Link

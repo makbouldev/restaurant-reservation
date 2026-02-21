@@ -336,6 +336,10 @@ export default function App() {
   const adminSection = isAdminPath ? normalizedPath.replace('/admin', '').replace(/^\/+/, '') || 'dashboard' : '';
   const currentRoute = publicRoutes.includes(normalizedPath) ? normalizedPath : '/';
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [location.pathname]);
+
   const [adminToken, setAdminToken] = useState(
     isAdminPath ? localStorage.getItem(ADMIN_TOKEN_KEY) || '' : ''
   );
