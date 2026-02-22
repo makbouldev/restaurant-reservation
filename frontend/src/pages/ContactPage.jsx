@@ -1,7 +1,7 @@
 import contactBackgroundImage from '../assets/contact-background.jpg';
 
 const fallbackRestaurantInfo = {
-  phone: '+212 522 49 16 16',
+  phone: '+212725572550',
   email: 'contact@pfm.ma',
   address: 'Boulevard de la Corniche, Casablanca',
   openingHours: 'Ouvert tous les jours de 09:00 a 18:00'

@@ -91,8 +91,8 @@ const DEFAULT_SPECIAL_OFFERS = [
 ];
 const DEFAULT_RESTAURANT_INFO = {
   restaurantName: 'NeonBite',
-  phone: '+212 6 12 34 56 78',
-  whatsappPhone: '212612345678',
+  phone: '+212725572550',
+  whatsappPhone: '212725572550',
   email: 'contact@neonbite.ma',
   address: 'Boulevard de la Corniche, Casablanca',
   openingHours: 'Ouvert tous les jours 12:00 - 01:00',

@@ -128,8 +128,8 @@ const defaultGalleryImages = [
 ];
 const defaultRestaurantInfo = {
   restaurantName: 'Laplage',
-  phone: '+212 522 49 16 16',
-  whatsappPhone: '212522207111',
+  phone: '+212725572550',
+  whatsappPhone: '212725572550',
   email: 'contact@pfm.ma',
   address: 'Boulevard de la Corniche, Casablanca',
   openingHours: 'Ouvert tous les jours de 09:00 a 18:00',
@@ -242,7 +242,7 @@ function FloatingQuickActions({ t, restaurantInfo }) {
       <div className="floating-dock-side floating-dock-left">
         <a
           className="floating-action wa"
-          href={`https://wa.me/${whatsappHref || '212612345678'}`}
+          href={`https://wa.me/${whatsappHref || '212725572550'}`}
           target="_blank"
           rel="noreferrer"
           aria-label={t.app.whatsappLabel}
@@ -255,7 +255,7 @@ function FloatingQuickActions({ t, restaurantInfo }) {
           </span>
           <span className="floating-text">{t.app.whatsappLabel}</span>
         </a>
-        <a className="floating-action call" href={`tel:${phoneHref || '+212612345678'}`} aria-label={t.app.callLabel}>
+        <a className="floating-action call" href={`tel:${phoneHref || '+212725572550'}`} aria-label={t.app.callLabel}>
           <span className="floating-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24" className="floating-svg">
               <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.6 19.6 0 0 1-8.5-3 19.2 19.2 0 0 1-6-6 19.6 19.6 0 0 1-3-8.6A2 2 0 0 1 4.2 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2L8.2 9.5a16 16 0 0 0 6.3 6.3l1.2-1.2a2 2 0 0 1 2-.4c.8.3 1.7.5 2.6.6A2 2 0 0 1 22 16.9Z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -988,7 +988,7 @@ export default function App() {
                     <path d="M6.7 8.3a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6ZM5 10h3.3v9H5v-9Zm5.3 0h3.1v1.3h.1c.4-.8 1.5-1.6 3-1.6 3.2 0 3.8 2.1 3.8 4.8V19H17v-4.1c0-1 0-2.2-1.3-2.2s-1.6 1-1.6 2.1V19h-3.8v-9Z" fill="currentColor" />
                   </svg>
                 </a>
-                <a href={`https://wa.me/${whatsappHref || '212612345678'}`} target="_blank" rel="noreferrer" className="footer-social-link is-whatsapp" aria-label="WhatsApp">
+                <a href={`https://wa.me/${whatsappHref || '212725572550'}`} target="_blank" rel="noreferrer" className="footer-social-link is-whatsapp" aria-label="WhatsApp">
                   <svg viewBox="0 0 24 24" className="footer-social-icon" aria-hidden="true">
                     <path d="M20 12a8 8 0 0 1-11.7 7l-4.3 1 1-4.1A8 8 0 1 1 20 12Zm-6.1 1.7-.8.8c-.3.3-.7.4-1.1.3-1.2-.2-3.1-2.1-3.3-3.3-.1-.4 0-.8.3-1.1l.8-.8-.9-1.4-1 .4c-.6.2-1 .8-1 1.4 0 2.7 2.5 5.2 5.2 5.2.6 0 1.2-.4 1.4-1l.4-1-.9-1.4Z" fill="currentColor" />
                   </svg>
